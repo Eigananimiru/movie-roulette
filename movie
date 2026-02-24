@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>今日の映画ルーレット</title>
+<style>
+body{font-family:sans-serif;background:#111;color:#fff;text-align:center;padding:40px}
+button{padding:15px 25px;font-size:16px;border:none;border-radius:10px;cursor:pointer}
+.result{margin-top:20px;font-size:22px}
+</style>
+</head>
+<body>
+
+<h1>今日の映画ルーレット</h1>
+<button onclick="pickMovie()">ランダムに選ぶ</button>
+<div class="result" id="result"></div>
+
+<script>
+const movies=[
+"インセプション",
+"ラ・ラ・ランド",
+"ショーシャンクの空に",
+"マッドマックス",
+"最強のふたり",
+"ナイブズアウト",
+"バックトゥザフューチャー",
+"パラサイト"
+];
+
+function pickMovie(){
+const random=Math.floor(Math.random()*movies.length);
+document.getElementById("result").innerText=movies[random];
+}
+</script>
+
+</body>
+</html>
